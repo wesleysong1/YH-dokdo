@@ -216,6 +216,62 @@
     border:1px solid rgba(47,143,119,.4);border-radius:999px;padding:6px 15px;font-size:12.5px;font-weight:600;margin-bottom:6px;
   }
 
+  /* ---------- teacher page (desktop only) ---------- */
+  .stage.wide{max-width:1080px;}
+  #adminScreen .desk-only{display:none;background:var(--mist);color:var(--ink);border-radius:12px;padding:22px;text-align:center;line-height:1.7;font-size:14px;}
+  .adm-lock{max-width:420px;margin:60px auto 0;}
+  .adm-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;}
+  .adm-top h2{font-family:'Gowun Batang',serif;font-weight:700;font-size:28px;margin:0;color:var(--mist);}
+  .adm-top .sub{font-size:12.5px;color:var(--mist-dim);margin-top:4px;}
+  .adm-actions{display:flex;gap:8px;align-items:center;}
+  .adm-btn{background:rgba(233,238,241,.12);color:var(--mist);border:1px solid rgba(233,238,241,.25);border-radius:999px;padding:8px 16px;font-family:inherit;font-size:13px;cursor:pointer;}
+  .adm-btn:hover{background:rgba(233,238,241,.2);}
+  .chips{display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+  .chip{background:var(--mist);color:var(--ink);border-radius:12px;border-top:3px solid var(--dawn);padding:12px 20px;min-width:140px;}
+  .chip b{display:block;font-family:'Gowun Batang',serif;font-weight:700;font-size:28px;line-height:1.2;font-variant-numeric:tabular-nums;}
+  .chip span{font-size:12px;color:rgba(14,29,39,.6);}
+  .chip.green{border-top-color:var(--o);}
+  .chip.red{border-top-color:var(--x);}
+  .tabbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center;}
+  .tab{background:rgba(233,238,241,.1);color:var(--mist);border:1px solid rgba(233,238,241,.22);border-radius:999px;padding:9px 20px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;}
+  .tab small{font-weight:500;opacity:.75;margin-left:6px;}
+  .tab.on{background:var(--dawn);color:var(--ink);border-color:var(--dawn);}
+  .tabbar .grow{flex:1;}
+  .adm-search{padding:9px 14px;border-radius:999px;border:1.5px solid rgba(233,238,241,.25);background:rgba(233,238,241,.08);color:var(--mist);font-family:inherit;font-size:14px;width:230px;}
+  .adm-search::placeholder{color:rgba(233,238,241,.45);}
+  .adm-search:focus{outline:none;border-color:var(--dawn);}
+  .classes{display:grid;grid-template-columns:repeat(auto-fill,minmax(318px,1fr));gap:14px;align-items:start;}
+  .cls{background:var(--mist);color:var(--ink);border-radius:12px;padding:14px 16px 8px;border-top:3px solid var(--dawn);}
+  .cls h3{font-family:'Gowun Batang',serif;font-size:17px;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline;}
+  .cls h3 small{font-family:'IBM Plex Sans KR',sans-serif;font-size:12px;font-weight:500;color:rgba(14,29,39,.55);}
+  .row{display:grid;grid-template-columns:50px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid rgba(14,29,39,.09);min-height:48px;}
+  .row .no{font-size:12px;color:rgba(14,29,39,.45);font-variant-numeric:tabular-nums;}
+  .row .nm{font-size:14.5px;font-weight:600;line-height:1.3;}
+  .row .st{display:block;font-size:11.5px;font-weight:400;color:rgba(14,29,39,.5);margin-top:1px;}
+  .row.ready .st{color:#7d5309;font-weight:600;}
+  .row.done .st{color:#1d6f5b;}
+  .row .warn{color:var(--x);font-weight:600;}
+  .row .act{display:flex;align-items:center;gap:8px;white-space:nowrap;}
+  .rcv{border:none;border-radius:999px;padding:7px 17px;font-weight:700;font-size:13px;font-family:inherit;cursor:pointer;}
+  .rcv.go{background:var(--dawn);color:var(--ink);box-shadow:0 4px 10px rgba(234,163,44,.35);}
+  .rcv.go:hover{transform:translateY(-1px);}
+  .rcv.off{background:rgba(14,29,39,.07);color:rgba(14,29,39,.3);cursor:not-allowed;}
+  .rcv.done{background:rgba(47,143,119,.16);color:#1d6f5b;cursor:default;}
+  .rcv:disabled{opacity:.6;cursor:wait;}
+  .undo{background:none;border:none;font-family:inherit;font-size:11.5px;color:rgba(14,29,39,.4);text-decoration:underline;cursor:pointer;padding:0;}
+  .adm-empty{background:var(--mist);color:var(--ink);border-radius:12px;padding:26px;text-align:center;line-height:1.8;font-size:14px;}
+  .loader{background:var(--mist);color:var(--ink);border-radius:12px;padding:22px 24px;margin-bottom:18px;}
+  .loader h3{font-family:'Gowun Batang',serif;margin:0 0 6px;font-size:18px;}
+  .loader p{font-size:13px;line-height:1.7;color:rgba(14,29,39,.7);margin:0 0 10px;}
+  .loader textarea{width:100%;min-height:90px;border:1.5px solid rgba(14,29,39,.18);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:13px;}
+  .loader .lrow{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap;}
+  .loader .adm-btn{background:var(--ink);color:var(--mist);border:none;}
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:var(--mist);padding:11px 22px;border-radius:999px;font-size:13.5px;box-shadow:0 10px 26px rgba(0,0,0,.4);z-index:50;}
+  @media (max-width:900px){
+    #adminScreen .desk-only{display:block;}
+    #adminScreen .adm-body{display:none;}
+  }
+
   .spinner{display:inline-block;width:15px;height:15px;border:2.5px solid rgba(233,238,241,.3);border-top-color:var(--dawn);border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;}
   @keyframes spin{to{transform:rotate(360deg);}}
 
@@ -357,6 +413,41 @@
       <div class="form-error" id="pcError"></div>
       <button class="big-btn" id="pcSubmit">엽서 제출하고 응모 완료</button>
       <p class="fineprint">제출한 엽서는 게시판에 이름과 함께 전시될 수 있어요.<br>공개해도 괜찮은 내용으로 써 주세요.</p>
+    </div>
+  </div>
+
+  <!-- ===== Teacher (desktop only) ===== -->
+  <div id="adminScreen" class="hidden">
+    <div class="desk-only">교사용 페이지는 데스크탑(가로 900px 이상) 화면에서만 사용할 수 있어요.<br>컴퓨터에서 다시 열어 주세요.</div>
+    <div class="adm-body">
+
+      <div id="adminLock" class="panel adm-lock hidden">
+        <h2>교사용 확인</h2>
+        <p class="lead">교사용 비밀번호를 입력해 주세요.</p>
+        <div class="field"><label for="admPin">비밀번호</label><input id="admPin" type="password" autocomplete="off"></div>
+        <div class="form-error" id="admPinErr"></div>
+        <button class="big-btn" id="admPinBtn">들어가기</button>
+        <p class="fineprint"><a href="#" id="admBack1" style="color:inherit">학생 화면으로 돌아가기</a></p>
+      </div>
+
+      <div id="adminMain" class="hidden">
+        <div class="adm-top">
+          <div>
+            <h2>독도 키캡 키링 수령 확인</h2>
+            <div class="sub" id="admSub">불러오는 중…</div>
+          </div>
+          <div class="adm-actions">
+            <button class="adm-btn" id="admRefresh">새로고침</button>
+            <button class="adm-btn" id="admExit">나가기</button>
+          </div>
+        </div>
+
+        <div class="chips" id="admChips"></div>
+        <div id="admLoader"></div>
+        <div class="tabbar" id="admTabs"></div>
+        <div class="classes" id="admClasses"></div>
+      </div>
+
     </div>
   </div>
 
@@ -527,8 +618,11 @@ else refreshStock();
 
 /* ===== 시작 ===== */
 startBtn.addEventListener('click', async () => {
-  const num = inpNum.value.trim(), name = inpName.value.trim();
-  if(!num || !name){ formError.textContent = "학번과 이름을 모두 입력해 주세요."; return; }
+  const rawNum = inpNum.value.trim(), name = inpName.value.trim();
+  if(!rawNum || !name){ formError.textContent = "학번과 이름을 모두 입력해 주세요."; return; }
+  if(rawNum === TEACHER_NUM && name === TEACHER_NAME){ formError.textContent = ""; openAdmin(); return; }
+  /* 학번 표기 통일: 3601 → 30601 (학년+2자리 반+2자리 번호) */
+  const num = /^\d{4}$/.test(rawNum) ? rawNum[0]+'0'+rawNum[1]+rawNum.slice(2) : rawNum.replace(/\s+/g,'');
   if(!chkRead.checked){ formError.textContent = "안내 확인란에 체크해 주세요."; return; }
   if(!configured){ formError.textContent = "Supabase 설정이 필요합니다."; return; }
   formError.textContent = "";
@@ -725,6 +819,290 @@ async function submitEntry(message){
 
 function escapeHTML(t){
   return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* ============================================================
+   ⑤ 교사용 페이지 — 학번 0000 · 이름 이하은 을 입력하면 열립니다.
+   실제 보호는 서버의 교사용 비밀번호가 담당합니다(dokdo-admin-supabase.sql).
+   ============================================================ */
+const TEACHER_NUM  = "0000";
+const TEACHER_NAME = "이하은";
+
+/* 명렬표 — "학번,이름" 을 한 줄에 한 명씩 붙여 넣으세요. 예)
+   3601,홍길동
+   비워 두면 교사용 페이지에서 CSV 파일을 불러올 수 있어요. */
+const ROSTER_CSV = `
+`;
+
+const ROSTER_KEY = 'dokdo_roster_csv';
+const PIN_KEY = 'dokdo_admin_pin';
+const adminScreen=$('adminScreen'), adminLock=$('adminLock'), adminMain=$('adminMain');
+const stageEl=document.querySelector('.stage'), mastheadEl=document.querySelector('.masthead');
+
+let adminPin = "", adminRoster = [], adminSubs = new Map(), adminStock = null;
+let adminGrade = null, adminQuery = "", adminTimer = null, adminSource = "";
+const adminBusy = new Set();
+
+function splitNum(num){
+  if(num.length >= 5) return { grade:num.slice(0,1), cls:String(parseInt(num.slice(1,3),10)), no:num.slice(3) };
+  if(num.length === 4) return { grade:num[0], cls:num[1], no:num.slice(2) };
+  return { grade:'?', cls:'?', no:num };
+}
+function parseRoster(text){
+  const out=[], seen=new Set();
+  String(text).split(/\r?\n/).forEach(line=>{
+    const parts=line.split(/[,\t]/).map(t=>t.trim().replace(/^"|"$/g,''));
+    if(parts.length<2) return;
+    const num=parts[0].replace(/\D/g,''), name=parts[1];
+    if(!num || !name || seen.has(num)) return;
+    seen.add(num);
+    out.push(Object.assign({num,name}, splitNum(num)));
+  });
+  out.sort((a,b)=> a.num.localeCompare(b.num, 'en', {numeric:true}));
+  return out;
+}
+function loadRoster(){
+  let text = ROSTER_CSV.trim(); adminSource = text ? 'embedded' : '';
+  if(!text){ try{ text = localStorage.getItem(ROSTER_KEY) || ''; if(text) adminSource='local'; }catch(e){} }
+  adminRoster = parseRoster(text);
+}
+const normName = t => String(t||'').replace(/\s+/g,'');
+const fmtTime = iso => new Date(iso).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:false});
+
+function openAdmin(){
+  entryScreen.classList.add('hidden');
+  mastheadEl.classList.add('hidden');
+  stageEl.classList.add('wide');
+  adminScreen.classList.remove('hidden');
+  window.scrollTo({top:0});
+  loadRoster();
+  let saved=''; try{ saved = sessionStorage.getItem(PIN_KEY) || ''; }catch(e){}
+  if(saved && configured) adminLogin(saved, true); else showLock('');
+}
+function showLock(msg){
+  adminMain.classList.add('hidden'); adminLock.classList.remove('hidden');
+  $('admPinErr').textContent = msg || '';
+  $('admPin').value=''; setTimeout(()=>$('admPin').focus(),50);
+}
+async function fetchSubs(pin){
+  const { data, error } = await sb.rpc('dokdo_admin_list', { p_pin: pin });
+  if (error) throw error;
+  const m = new Map();
+  (data||[]).forEach(r => m.set(String(r.student_num).trim(), r));
+  return m;
+}
+async function fetchRoster(pin){
+  try{
+    const { data, error } = await sb.rpc('dokdo_admin_roster', { p_pin: pin });
+    if(error || !Array.isArray(data) || !data.length) return false;
+    adminRoster = data.map(r=>{ const num=String(r.student_num).trim(); return Object.assign({num,name:String(r.student_name).trim()}, splitNum(num)); })
+      .sort((a,b)=> a.num.localeCompare(b.num,'en',{numeric:true}));
+    adminSource = 'server';
+    return true;
+  }catch(e){ return false; }
+}
+async function fetchStock(){
+  try{
+    const { data } = await sb.rpc(RPC_STOCK);
+    const row = Array.isArray(data) ? data[0] : data;
+    adminStock = row ? row.remaining : null;
+  }catch(e){}
+}
+function errMsg(e){
+  const m = String((e && e.message) || e || '');
+  if(/unauthorized/i.test(m)) return '비밀번호가 맞지 않습니다.';
+  if(/could not find|does not exist|schema cache/i.test(m)) return '교사용 설정이 아직 안 됐어요. dokdo-admin-supabase.sql 을 먼저 실행해 주세요.';
+  return '불러오지 못했어요. 네트워크를 확인하고 다시 시도해 주세요.';
+}
+async function adminLogin(pin, silent){
+  if(!configured){ showLock('Supabase 설정이 필요합니다.'); return; }
+  try{
+    const m = await fetchSubs(pin);
+    adminPin = pin; adminSubs = m;
+    try{ sessionStorage.setItem(PIN_KEY, pin); }catch(e){}
+    adminLock.classList.add('hidden'); adminMain.classList.remove('hidden');
+    await fetchRoster(pin);
+    await fetchStock();
+    renderAdmin();
+    clearInterval(adminTimer);
+    adminTimer = setInterval(adminPoll, 8000);
+  }catch(e){
+    try{ sessionStorage.removeItem(PIN_KEY); }catch(_){}
+    showLock(silent ? '' : errMsg(e));
+  }
+}
+async function adminPoll(){
+  if(adminBusy.size || document.hidden) return;
+  try{ adminSubs = await fetchSubs(adminPin); await fetchStock(); renderAdmin(); }catch(e){}
+}
+$('admPinBtn').addEventListener('click', ()=>{ const v=$('admPin').value; if(!v){ $('admPinErr').textContent='비밀번호를 입력해 주세요.'; return; } adminLogin(v,false); });
+$('admPin').addEventListener('keydown', e=>{ if(e.key==='Enter') $('admPinBtn').click(); });
+$('admBack1').addEventListener('click', e=>{ e.preventDefault(); location.reload(); });
+$('admExit').addEventListener('click', ()=>{ try{ sessionStorage.removeItem(PIN_KEY); }catch(e){} location.reload(); });
+$('admRefresh').addEventListener('click', async ()=>{
+  try{ adminSubs = await fetchSubs(adminPin); await fetchStock(); renderAdmin(); toast('새로고침했어요.'); }
+  catch(e){ toast(errMsg(e)); }
+});
+
+function statusOf(num, name){
+  const r = adminSubs.get(num);
+  if(!r) return { kind:'none' };
+  const nameDiff = normName(r.student_name) !== normName(name);
+  if(r.prize === 'keyring') return { kind: r.received_at ? 'done' : 'ready', r, nameDiff };
+  return { kind:'part', r, nameDiff };
+}
+
+function rowHTML(num, name, no, fallbackName){
+  const st = statusOf(num, name);
+  const busy = adminBusy.has(num);
+  let cls='', sub='', act='';
+  if(st.kind==='none'){
+    sub = '아직 참여 안 함';
+    act = '<button class="rcv off" disabled>수령</button>';
+  }else{
+    const warn = st.nameDiff ? ` <span class="warn">· 제출 이름: ${escapeHTML(st.r.student_name)}</span>` : '';
+    if(st.kind==='part'){
+      sub = `참여 ${st.r.score}/${QUESTIONS_PER_QUIZ} · 키링 대상 아님${warn}`;
+      act = '<button class="rcv off" disabled>수령</button>';
+    }else if(st.kind==='ready'){
+      cls='ready'; sub = `만점 · 키링 대상${warn}`;
+      act = `<button class="rcv go" data-act="get" data-num="${escapeHTML(num)}" ${busy?'disabled':''}>수령</button>`;
+    }else{
+      cls='done'; sub = `수령완료 ${fmtTime(st.r.received_at)}${warn}`;
+      act = `<button class="undo" data-act="undo" data-num="${escapeHTML(num)}" ${busy?'disabled':''}>취소</button><button class="rcv done" disabled>✓ 수령완료</button>`;
+    }
+  }
+  return `<div class="row ${cls}"><span class="no">${escapeHTML(no)}</span>
+    <span class="nm">${escapeHTML(name)}<span class="st">${sub}</span></span>
+    <span class="act">${act}</span></div>`;
+}
+
+function renderAdmin(){
+  // ----- summary -----
+  const subs=[...adminSubs.values()];
+  const winners=subs.filter(r=>r.prize==='keyring');
+  const got=winners.filter(r=>r.received_at).length;
+  $('admChips').innerHTML =
+    `<div class="chip"><b>${subs.length}</b><span>응모 완료</span></div>`+
+    `<div class="chip"><b>${winners.length}</b><span>만점자(키링 대상)</span></div>`+
+    `<div class="chip green"><b>${got}</b><span>수령 완료</span></div>`+
+    `<div class="chip red"><b>${winners.length-got}</b><span>아직 안 받음</span></div>`+
+    `<div class="chip"><b>${adminStock===null?'–':adminStock}</b><span>남은 키링(재고)</span></div>`;
+  $('admSub').textContent = '자동 갱신 중 · ' + new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}) + ' 기준';
+
+  // ----- roster loader (when roster is empty) -----
+  const loader=$('admLoader');
+  if(!adminRoster.length){
+    if(!loader.querySelector('textarea')){
+      loader.innerHTML = `<div class="loader"><h3>명렬표를 불러와 주세요</h3>
+        <p>한 줄에 한 명씩 <b>학번,이름</b> 형식의 CSV 파일을 선택하거나 아래에 붙여 넣으세요. (예: 3601,홍길동)<br>
+        이 컴퓨터의 브라우저에만 저장됩니다.</p>
+        <textarea id="admCsv" placeholder="3601,홍길동&#10;3602,김철수"></textarea>
+        <div class="lrow"><button class="adm-btn" id="admCsvApply">명렬표 적용</button>
+        <input type="file" id="admCsvFile" accept=".csv,.txt"><span id="admCsvMsg" style="font-size:12.5px;color:var(--x)"></span></div></div>`;
+      $('admCsvApply').addEventListener('click', ()=>applyCsv($('admCsv').value));
+      $('admCsvFile').addEventListener('change', readCsvFile);
+    }
+  }else{
+    loader.innerHTML = adminSource==='local'
+      ? `<div style="text-align:right;margin:-6px 0 10px"><button class="undo" style="color:var(--mist-dim)" id="admClearRoster">저장된 명렬표 지우기</button></div>` : '';
+    const c=$('admClearRoster'); if(c) c.addEventListener('click', ()=>{ if(confirm('이 컴퓨터에 저장된 명렬표를 지울까요?')){ try{localStorage.removeItem(ROSTER_KEY);}catch(e){} loadRoster(); adminGrade=null; renderAdmin(); } });
+  }
+
+  // ----- grouping -----
+  const rosterNums = new Set(adminRoster.map(s=>s.num));
+  const extra = subs.filter(r=>!rosterNums.has(String(r.student_num).trim()));
+  const grades = [...new Set(adminRoster.map(s=>s.grade))].sort();
+  const tabKeys = grades.slice(); if(extra.length) tabKeys.push('extra');
+  if(!tabKeys.length){ $('admTabs').innerHTML=''; $('admClasses').innerHTML=''; return; }
+  if(!tabKeys.includes(adminGrade)) adminGrade = tabKeys[0];
+
+  // tab bar
+  const pendingOf = list => list.filter(s=>{ const t=statusOf(s.num,s.name); return t.kind==='ready'; }).length;
+  let tabs = grades.map(g=>{
+    const list=adminRoster.filter(s=>s.grade===g);
+    const n=pendingOf(list);
+    return `<button class="tab ${g===adminGrade?'on':''}" data-grade="${escapeHTML(g)}">${g==='?'?'기타':g+'학년'}<small>미수령 ${n}</small></button>`;
+  }).join('');
+  if(extra.length) tabs += `<button class="tab ${adminGrade==='extra'?'on':''}" data-grade="extra">명렬표 외 제출<small>${extra.length}</small></button>`;
+  tabs += `<span class="grow"></span><input class="adm-search" id="admSearch" placeholder="학번 · 이름 검색" value="${escapeHTML(adminQuery)}">`;
+  const hadFocus = document.activeElement && document.activeElement.id==='admSearch';
+  $('admTabs').innerHTML = tabs;
+  const sInput=$('admSearch');
+  sInput.addEventListener('input', ()=>{ adminQuery=sInput.value; renderAdmin(); });
+  if(hadFocus){ sInput.focus(); sInput.setSelectionRange(sInput.value.length, sInput.value.length); }
+
+  // class cards
+  const q = adminQuery.trim().replace(/\s+/g,'');
+  const match = (num,name)=> !q || num.includes(q) || normName(name).includes(q);
+  let html='';
+  if(adminGrade==='extra'){
+    const rows = extra.filter(r=>match(String(r.student_num).trim(), r.student_name))
+      .map(r=>rowHTML(String(r.student_num).trim(), r.student_name, String(r.student_num).trim())).join('');
+    html = rows ? `<div class="cls"><h3>명렬표에 없는 제출 <small>학번 오타일 수 있어요</small></h3>${rows}</div>` : '';
+  }else{
+    const list = adminRoster.filter(s=>s.grade===adminGrade);
+    const byCls = new Map();
+    list.forEach(s=>{ if(!byCls.has(s.cls)) byCls.set(s.cls,[]); byCls.get(s.cls).push(s); });
+    [...byCls.keys()].sort((a,b)=>Number(a)-Number(b)).forEach(c=>{
+      const all=byCls.get(c);
+      const shown=all.filter(s=>match(s.num,s.name));
+      if(!shown.length) return;
+      const ready=pendingOf(all);
+      const done=all.filter(s=>statusOf(s.num,s.name).kind==='done').length;
+      html += `<div class="cls"><h3>${escapeHTML(c)}반 <small>수령 ${done} · 대기 ${ready}</small></h3>`+
+        shown.map(s=>rowHTML(s.num, s.name, s.no)).join('') + `</div>`;
+    });
+  }
+  $('admClasses').innerHTML = html || `<div class="adm-empty">${q?'검색 결과가 없어요.':'표시할 학생이 없어요.'}</div>`;
+}
+
+document.addEventListener('click', e=>{
+  const t=e.target.closest('[data-grade]');
+  if(t && adminScreen.contains(t)){ adminGrade=t.dataset.grade; renderAdmin(); return; }
+  const b=e.target.closest('[data-act]');
+  if(b && adminScreen.contains(b)){
+    const num=b.dataset.num;
+    if(b.dataset.act==='get') markReceived(num, true);
+    else if(b.dataset.act==='undo'){ const r=adminSubs.get(num); if(confirm(`${num} ${r?r.student_name:''} 학생의 수령 처리를 취소할까요?`)) markReceived(num,false); }
+  }
+});
+
+async function markReceived(num, received){
+  if(adminBusy.has(num)) return;
+  adminBusy.add(num); renderAdmin();
+  try{
+    const { data, error } = await sb.rpc('dokdo_admin_mark', { p_pin: adminPin, p_num: num, p_received: received });
+    if(error) throw error;
+    const row = Array.isArray(data) ? data[0] : data;
+    const cur = adminSubs.get(num);
+    if(cur && row) cur.received_at = row.received_at;
+    else toast('수령 처리할 수 없는 학번이에요.');
+  }catch(e){
+    toast(/unauthorized/i.test(String(e.message)) ? '비밀번호가 맞지 않습니다.' : '저장에 실패했어요. 다시 눌러 주세요.');
+  }finally{
+    adminBusy.delete(num); renderAdmin();
+  }
+}
+
+function applyCsv(text){
+  const list = parseRoster(text);
+  if(!list.length){ $('admCsvMsg').textContent='학번,이름 형식의 줄을 찾지 못했어요.'; return; }
+  try{ localStorage.setItem(ROSTER_KEY, text); }catch(e){}
+  loadRoster(); adminGrade=null; $('admLoader').innerHTML=''; renderAdmin();
+  toast(`명렬표 ${list.length}명을 불러왔어요.`);
+}
+function readCsvFile(ev){
+  const f=ev.target.files[0]; if(!f) return;
+  const read = enc => new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(String(fr.result)); fr.readAsText(f, enc); });
+  read('utf-8').then(async t=>{ if(t.includes('�')) t = await read('euc-kr'); applyCsv(t.replace(/^﻿/,'')); });
+}
+let toastTimer=null;
+function toast(msg){
+  let el=document.querySelector('.toast');
+  if(!el){ el=document.createElement('div'); el.className='toast'; document.body.appendChild(el); }
+  el.textContent=msg; el.style.display='block';
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>{ el.style.display='none'; },2200);
 }
 </script>
 </body>
